@@ -21,7 +21,13 @@ yarn add react-native-store-age-signals-native-modules
    ```sh
    cd ios && pod install
    ```
-2. **Requirements**: This library uses the `DeclaredAgeRange` framework which is available on **iOS 18.0+**. On older iOS versions, the API will return a fallback response.
+3. **Entitlements**: You must enable the "Declared Age Range" capability for your app.
+    - Open your project in Xcode.
+    - Select your App target -> "Signing & Capabilities".
+    - Click "+ Capability" and add **Declared Age Range**.
+    - This adds the `com.apple.developer.declared-age-range` entitlement key to your `.entitlements` file.
+    *(Without this, the API will fail with "Error 0")*
+    > **Note**: This capability may not be available for "Personal Team" (free) provisioning profiles. You likely need a paid Apple Developer Program membership to sign apps with this entitlement.
 
 ### Android Setup
 
@@ -126,9 +132,8 @@ Returns `Promise<DeclaredAgeRangeResult>`:
 - `upperBound`: `number | null`
 
 
-### Error Codes
-
-If `errorCode` is present, it corresponds to one of the following Play Age Signals API error codes:
+### Android Error Codes
+*(Returned in `errorCode` for `getAndroidPlayAgeRangeStatus`)*
 
 | Code | Error | Description | Retryable |
 |---|---|---|---|
@@ -142,6 +147,13 @@ If `errorCode` is present, it corresponds to one of the following Play Age Signa
 | -8 | CLIENT_TRANSIENT_ERROR | Transient client error. Retry with backoff. | Yes |
 | -9 | APP_NOT_OWNED | App not installed by Google Play. | No |
 | -100 | INTERNAL_ERROR | Unknown internal error. | No |
+
+### iOS Error Codes
+*(Returned in promise rejection for `requestIOSDeclaredAgeRange`)*
+
+| Code | Error | Description |
+|---|---|---|
+| 0 | IOS_ENTITLEMENT_ERROR | Missing Entitlement OR Feature unavailable on Simulator. Test on real device. |
 
 ## Contributing
 

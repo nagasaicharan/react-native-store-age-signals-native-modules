@@ -2,7 +2,14 @@ import {
   getAndroidPlayAgeRangeStatus,
   requestIOSDeclaredAgeRange,
 } from 'react-native-store-age-signals-native-modules';
-import { Text, View, StyleSheet, Button, Platform } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  Button,
+  Platform,
+  TextInput,
+} from 'react-native';
 import { useState } from 'react';
 
 export default function App() {
@@ -37,7 +44,7 @@ export default function App() {
           <Text style={styles.sectionTitle}>Real API</Text>
           <Button title="Check Live Age Status" onPress={checkAndroidAge} />
 
-          <View style={{ height: 20 }} />
+          <View style={styles.spacer20} />
           <Text style={styles.sectionTitle}>Mock Scenarios</Text>
 
           <Button
@@ -52,7 +59,7 @@ export default function App() {
               setResult(JSON.stringify(data, null, 2));
             }}
           />
-          <View style={{ height: 10 }} />
+          <View style={styles.spacer10} />
           <Button
             title="Mock: Supervised (13-17)"
             color="#f1c40f"
@@ -67,7 +74,7 @@ export default function App() {
               setResult(JSON.stringify(data, null, 2));
             }}
           />
-          <View style={{ height: 10 }} />
+          <View style={styles.spacer10} />
           <Button
             title="Mock: Error (API Unavailable -1)"
             color="#e74c3c"
@@ -80,7 +87,7 @@ export default function App() {
               setResult(JSON.stringify(data, null, 2));
             }}
           />
-          <View style={{ height: 10 }} />
+          <View style={styles.spacer10} />
           <Button
             title="Mock: Unknown"
             color="#95a5a6"
@@ -100,9 +107,12 @@ export default function App() {
         <Button title="Request iOS Declared Age" onPress={checkIOSAge} />
       )}
 
-      <Text selectable={true} style={styles.result}>
-        {result}
-      </Text>
+      <TextInput
+        style={styles.resultInput}
+        multiline
+        editable={false}
+        value={result}
+      />
     </View>
   );
 }
@@ -119,10 +129,16 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     fontWeight: 'bold',
   },
-  result: {
+  resultInput: {
     marginTop: 20,
     fontSize: 14,
     color: '#333',
+    width: '100%',
+    height: 200,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    padding: 10,
+    textAlignVertical: 'top',
   },
   actions: {
     width: '100%',
@@ -134,5 +150,11 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginBottom: 10,
     color: '#666',
+  },
+  spacer10: {
+    height: 10,
+  },
+  spacer20: {
+    height: 20,
   },
 });

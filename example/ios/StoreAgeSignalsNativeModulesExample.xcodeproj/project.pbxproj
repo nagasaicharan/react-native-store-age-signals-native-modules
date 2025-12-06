@@ -24,6 +24,7 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-StoreAgeSignalsNativeModulesExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StoreAgeSignalsNativeModulesExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = StoreAgeSignalsNativeModulesExample/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = StoreAgeSignalsNativeModulesExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B51E33A92EE4F25D00DEA8CA /* StoreAgeSignalsNativeModulesExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = StoreAgeSignalsNativeModulesExample.entitlements; path = StoreAgeSignalsNativeModulesExample/StoreAgeSignalsNativeModulesExample.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -42,6 +43,7 @@
 		13B07FAE1A68108700A75B9A /* StoreAgeSignalsNativeModulesExample */ = {
 			isa = PBXGroup;
 			children = (
+				B51E33A92EE4F25D00DEA8CA /* StoreAgeSignalsNativeModulesExample.entitlements */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				761780EC2CA45674006654EE /* AppDelegate.swift */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -191,9 +193,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-StoreAgeSignalsNativeModulesExample/Pods-StoreAgeSignalsNativeModulesExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-StoreAgeSignalsNativeModulesExample/Pods-StoreAgeSignalsNativeModulesExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -230,9 +236,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-StoreAgeSignalsNativeModulesExample/Pods-StoreAgeSignalsNativeModulesExample-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-StoreAgeSignalsNativeModulesExample/Pods-StoreAgeSignalsNativeModulesExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -259,7 +269,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = StoreAgeSignalsNativeModulesExample/StoreAgeSignalsNativeModulesExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8DUGA9V3J;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = StoreAgeSignalsNativeModulesExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -287,7 +299,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = StoreAgeSignalsNativeModulesExample/StoreAgeSignalsNativeModulesExample.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K8DUGA9V3J;
 				INFOPLIST_FILE = StoreAgeSignalsNativeModulesExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
