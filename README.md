@@ -1,9 +1,9 @@
 ![Store Age Signals Banner](assets/banner.png)
 
-<div align="center">
-  <img src="assets/screenshot_ios.png" width="45%" alt="iOS UI" />
-  <img src="assets/screenshot_android.png" width="45%" alt="Android UI" />
-</div>
+
+| iOS UI | Android UI |
+|:------:|:----------:|
+| ![iOS Screenshot](assets/screenshot_ios.png) | ![Android Screenshot](assets/screenshot_android.png) |
 
 # React Native Store Age Signals
 
