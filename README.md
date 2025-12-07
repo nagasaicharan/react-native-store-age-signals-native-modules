@@ -1,5 +1,10 @@
 ![Store Age Signals Banner](assets/banner.png)
 
+<div align="center">
+  <img src="assets/screenshot_ios.png" width="45%" alt="iOS UI" />
+  <img src="assets/screenshot_android.png" width="45%" alt="Android UI" />
+</div>
+
 # React Native Store Age Signals
 
 [![npm version](https://img.shields.io/npm/v/react-native-store-age-signals-native-modules.svg?style=flat-square)](https://www.npmjs.com/package/react-native-store-age-signals-native-modules)
