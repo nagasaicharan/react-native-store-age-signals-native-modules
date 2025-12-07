@@ -14,17 +14,22 @@
 
 **A production-grade React Native module for verifiable age signals.**
 
-Seamlessly integrate with **Apple's Declared Age Range API** (iOS 18+) and **Google Play Age Signals API** to meet state-level age verification compliance (e.g., Texas, Utah, Louisiana) without handling sensitive PII yourself.
+Seamlessly integrate with **Apple's Declared Age Range API** (iOS 26+) and **Google Play Age Signals API** to meet state-level age verification compliance (e.g., Texas, Utah, Louisiana) without handling sensitive PII yourself.
+
+> **⚠️ COMPLIANCE NOTICE**: Texas [SB2420](https://legiscan.com/TX/text/SB2420/id/3237346/Texas-2025-SB2420-Enrolled.html) **requires** apps to consume age signals from app stores starting **January 1, 2026**. Similar laws in Utah (May 7, 2026) and Louisiana (July 1, 2026) are also taking effect. This package provides the necessary integration for React Native apps.
+
+**Keywords**: `age verification`, `texas sb2420`, `age gate`, `parental controls`, `coppa compliance`, `react native age verification`, `google play age signals`, `ios declared age range`, `app store age verification`, `react native compliance`, `child safety`, `age appropriate design code`
 
 ---
 
 ## 🚀 Features
 
-- **🛡️ Privacy-First**: Leverages OS-level store APIs. You never see the user's birthdate.
-- **🍎 iOS Integration**: Native support for `DeclaredAgeRange` framework.
-- **🤖 Android Integration**: Wrapper for Google Play `AgeSignalsApi`.
+- **🛡️ Privacy-First**: Leverages OS-level store APIs. **No access to birthdates or PII** — only age range classifications.
+- **🍎 iOS Integration**: Native support for `DeclaredAgeRange` framework (iOS 26.0+).
+- **🤖 Android Integration**: Official wrapper for Google Play `AgeSignalsApi`.
 - **🧪 Mock Mode**: Built-in developer tools to simulate all age scenarios on Simulators and Emulators.
 - **⚡ Zero Config Mocks**: Verification logic works out-of-the-box for development.
+- **📱 Broad Compatibility**: Works with any React Native version (0.60+) — uses legacy native module architecture.
 
 ## 🏗️ Architecture
 
@@ -56,7 +61,7 @@ yarn add react-native-store-age-signals-native-modules
 ### 🍎 iOS Setup
 
 1.  **Framework Requirements**:
-    - **iOS 18.0+** is required for the API to function.
+    - **iOS 26.0+** is required for the `DeclaredAgeRange` API to function.
     - Older versions will return a fallback/unavailable response.
 
 2.  **Install Pods**:
