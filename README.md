@@ -5,9 +5,24 @@
 
 ### Screen Recordings
 
-| Android | iOS |
-|:-------:|:---:|
-| ![Android Demo](assets/Android_screen_recording.webm) | ![iOS Demo](assets/ios_screen_recording.mov) |
+<table>
+  <tr>
+    <th>Android</th>
+    <th>iOS</th>
+  </tr>
+  <tr>
+    <td>
+      <video src="https://github.com/nagasaicharan/react-native-store-age-signals-native-modules/raw/main/assets/Android_screen_recording.webm" width="300" controls>
+        Your browser does not support the video tag.
+      </video>
+    </td>
+    <td>
+      <video src="https://github.com/nagasaicharan/react-native-store-age-signals-native-modules/raw/main/assets/ios_screen_recording.mov" width="300" controls>
+        Your browser does not support the video tag.
+      </video>
+    </td>
+  </tr>
+</table>
 
 ### iOS Age Verification Modal (Real Device)
 
