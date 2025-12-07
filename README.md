@@ -90,6 +90,12 @@ yarn add react-native-store-age-signals-native-modules
     - Go to **Project Target** -> **Signing & Capabilities** -> **+ Capability** -> **Declared Age Range**.
     - *Note: This capability typically requires a paid Apple Developer Program membership. "Personal Team" profiles may not support it.*
 
+4.  **⚠️ Apple API Limitations**:
+    - **Minimum Range Duration**: Age thresholds must create ranges of **at least 2 years**.
+    - **Example**: Thresholds `10, 13, 16` work because they create: Under 10, 10-12 (2 yrs), 13-15 (2 yrs), 16+.
+    - **Invalid Example**: `13, 14, 21` would fail because 13-14 is only 1 year.
+    - Common working combinations: `10, 13, 16` or `13, 16, 18` or `13, 17, 21`.
+
 ### 🤖 Android Setup
 
 No manual configuration required. The package automatically bundles `com.google.android.play:age-signals`.
@@ -174,7 +180,18 @@ Request iOS Age Signal.
 
 | Parameter | Type | Description |
 |---|---|---|
-| `threshold[1-3]` | `number` | Age thresholds to verify (e.g. 13, 18, 21). |
+| `threshold[1-3]` | `number` | Age thresholds to verify. **Must create 2+ year ranges**. |
+
+**⚠️ Apple API Constraint**: Thresholds must result in age ranges of at least 2 years duration.
+- ✅ **Valid**: `10, 13, 16` → Creates ranges: <10, 10-12, 13-15, 16+
+- ✅ **Valid**: `13, 17, 21` → Creates ranges: <13, 13-16, 17-20, 21+
+- ❌ **Invalid**: `13, 14, 21` → 13-14 is only 1 year (API will reject)
+
+**Returns**: `Promise<DeclaredAgeRangeResult>`
+- `status`: `'sharing' | 'declined' | null`
+- `lowerBound`: `number | null` - Lower age of user's range
+- `upperBound`: `number | null` - Upper age of user's range
+- `parentControls`: `string | null` - Parental control status
 
 ## 🚨 Troubleshooting
 
