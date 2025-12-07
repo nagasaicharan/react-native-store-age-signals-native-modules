@@ -1,6 +1,22 @@
 ![Store Age Signals Banner](assets/banner.png)
 
 
+## 📱 Live Demos
+
+### Screen Recordings
+
+| Android | iOS |
+|:-------:|:---:|
+| ![Android Demo](assets/Android_screen_recording.webm) | ![iOS Demo](assets/ios_screen_recording.mov) |
+
+### iOS Age Verification Modal (Real Device)
+
+| Step 1 | Step 2 | Modal |
+|:------:|:------:|:-----:|
+| ![iOS Screenshot 1](assets/iOS_age_rating_1.PNG) | ![iOS Screenshot 2](assets/iOS_age_rating_2.PNG) | ![iOS Modal](assets/iOS_Modal_age_rating.png) |
+
+### Example App UI
+
 | iOS UI | Android UI |
 |:------:|:----------:|
 | ![iOS Screenshot](assets/screenshot_ios.png) | ![Android Screenshot](assets/screenshot_android.png) |
